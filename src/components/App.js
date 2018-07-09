@@ -13,13 +13,13 @@ class App extends Component {
   }
 }
 
-function mapStateToProps (calendar) {
+function mapStateToProps ({ food, calendar }) {
   const dayOrder = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 
   return {
     calendar: dayOrder.map((day) => ({
       day,
-      meals: {...calendar[day]}
+      meals: {...food[day]}
     })),
   }
 }
